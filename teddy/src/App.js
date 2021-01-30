@@ -28,7 +28,7 @@ function App() {
     
       <div className="footer">
         <div className="footer-header">
-          National Suicide Prevention Lifeline: <a href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+          National Suicide Prevention Lifeline: <a className="link" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
         </div>
         <div className="footer-body">
           <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
