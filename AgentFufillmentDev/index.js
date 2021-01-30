@@ -4,6 +4,8 @@ var keyword_extractor = require("keyword-extractor");
 var Sentiment = require('sentiment');
 var sentiment = new Sentiment();
 
+
+
 // This categories variables is referneced later.
 let categories = []
 
@@ -18,7 +20,6 @@ class Category {
 }
 
 function setCategories() {
-
     const youth = new Category();
     youth.keywords = ["teen", "teens", "minor", "adolescence", "child", "young", "youth", "puberty", "youngness", "middle school", "elementary", "high school", "teenager", "boy", "girl", "kid"];
     youth.resources = ["https://youmatter.suicidepreventionlifeline.org/", "https://www.activeminds.org/", "https://www.thetrevorproject.org/", "https://www.loveisrespect.org/"];
@@ -109,7 +110,7 @@ function getSentimentScore(query) {
 }
 
 function generateResponse(keywords) {
-    // The following builds a randomly selected list of responses with resources based on what the user is experiencing in life.
+    // The following code determines what the user is suffering from based on their querys keywords and the grabs a respective resource and statement to be used when building the response.
     let suffering_from = [];
     let response_statemets = [];
     let response_resources = [];
@@ -118,15 +119,16 @@ function generateResponse(keywords) {
             for (var categoryWord of category.keywords) {
                 if (!suffering_from.includes(category.name)) {
                     if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
-                        suffering_from.add(category.name);
-                        response_statemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
-                        response_resources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);
+                        suffering_from.push(category.name);
+                        response_statemets.push(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
+                        response_resources.push(category.resources[Math.floor(Math.random() * category.resources.length)]);
                     }
                 }
             }
         }
     }
     console.log("The user is suffering from: " + suffering_from);
+    // Build the response based on what they are suffering from and randomly selected associated responses and resources.
 }
 
 // The following function is for the complex Get Support intent.
@@ -141,6 +143,8 @@ function support(agent) {
     console.log(response);
 
 }
+
+
 setCategories();
 
 
