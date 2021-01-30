@@ -1,22 +1,22 @@
 import './App.css';
 import React from 'react';
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Navbar } from 'react-bootstrap';
 
 function App() {
   return (
     <Container fluid>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">
-          <img
-            alt="Teddy Logo"
-            src="/logo.png"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-          />{' '}
           Teddy
         </Navbar.Brand>
       </Navbar>
+      <img
+            alt="Teddy Logo"
+            src="/logo.svg"
+            width="50"
+            height="50"
+            className="d-inline-block align-top"
+          />
       <Row>
         <Col>
           <iframe
