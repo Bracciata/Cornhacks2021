@@ -21,6 +21,11 @@ a {
   font-size: 6vh;
 }
 
+.iframe-container {
+  height: 72vh;
+  padding: 10px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

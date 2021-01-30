@@ -22,7 +22,9 @@ function App() {
 
       <Row className="no-margin">
         <Col xs={{ span: 8, offset: 2 }}>
-          <iframe width="100%" height="78vh" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d"></iframe>
+          <div className="iframe-container">
+            <iframe width="100%" height="100%" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d"></iframe>
+          </div>
         </Col>
       </Row>
     
