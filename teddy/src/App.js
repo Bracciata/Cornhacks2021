@@ -15,7 +15,7 @@ function App() {
               height="70"
               className="d-inline-block align-top"
             />{' '}
-            Teddy
+            <div className="logo-text">Teddy</div>
           </div>
         </Navbar.Brand>
       </Navbar>
