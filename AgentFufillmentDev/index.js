@@ -4,6 +4,9 @@ var keyword_extractor = require("keyword-extractor");
 var Sentiment = require('sentiment');
 var sentiment = new Sentiment();
 
+// This categories variables is referneced later.
+let categories = []
+
 // The following function is for the complex Get Support intent.
 class Category {
     constructor(keywords, resources){
@@ -13,7 +16,6 @@ class Category {
 }
 
 function setCategories() {
-    let categories = []
 
     const youth = new Category();
     youth.keywords = ["teen", "teens", "minor", "adolescence", "child", "young", "youth", "puberty", "youngness", "middle school", "elementary", "high school", "teenager", "boy", "girl", "kid"];
@@ -92,20 +94,26 @@ function getSentimentScore(query) {
     return analysis_result.score;
 }
 
+function generateResponse(keywords){
+
+}
+
 // The following function is for the complex Get Support intent.
 function support(agent) {
     let query = agent.query;
     console.log("The user stated: " + query);
     let keywords = getKeywords(query);
     let sentimentScore = getSentimentScore(query);
+    let response =  generateResponse(keywords);
     // The following is replaced by agent.add instead of console.log when inside of Dialogflow.
+    
     console.log('Here to help!');
 
 }
+setCategories();
 
 
 // The following is not located within the live Dialogflow Index folder.
 // To run a different query update the string below.
 let agent = { query: "I need help with my addiction" };
 support(agent);
-setCategories();
