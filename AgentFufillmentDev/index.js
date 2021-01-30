@@ -9,11 +9,11 @@ let categories = []
 
 // The following function is for the complex Get Support intent.
 class Category {
-    constructor(keywords, resources,name,assistance_phrases) {
+    constructor(keywords, resources, name, assistance_phrases) {
         this.keywords = keywords;
         this.resources = resources;
         this.name = name;
-        this.assistance_phrases=assistance_phrases;
+        this.assistance_phrases = assistance_phrases;
     }
 }
 
@@ -109,14 +109,19 @@ function getSentimentScore(query) {
 }
 
 function generateResponse(keywords) {
+    // The following builds a randomly selected list of responses with resources based on what the user is experiencing in life.
+    let sufferingFrom = [];
+    let responseStatemets = [];
+    let responseResources = [];
     for (var word of keywords) {
         for (var category of categories) {
             for (var categoryWord of category.keywords) {
-                if (word.toLowerCase() == categoryWord) {
-                    // TODO: add them to the list the user is suffering with and do not add it twice.
-                    console.log(category.name);
-                }else if(categoryWord.includes(word.toLowerCase())){
-                    console.log(category.name);
+                if (!sufferingFrom.includes(category.name)) {
+                    if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
+                        sufferingFrom.add(category.name);
+                        responseStatemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
+                        responseResources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);   
+                    }
                 }
             }
         }
