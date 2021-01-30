@@ -1,0 +1,15 @@
+{
+  "name": "teddyfufillment",
+  "version": "1.0.0",
+  "description": "The fuffillment code for our agent Teddy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keyword-extractor": "0.0.19",
+    "sentiment": "^5.0.2"
+  }
+}
