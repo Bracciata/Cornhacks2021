@@ -19,16 +19,26 @@ function App() {
           </div>
         </Navbar.Brand>
       </Navbar>
+
       <Row className="no-margin">
         <Col xs={{ span: 8, offset: 2 }}>
-          <iframe
-            allow="microphone;"
-            width="100%"
-            height="450" // need to make this take up the remainer of the vertical screen space
-            src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d">
-          </iframe>
+          {/* <iframe className="iframe" allow="microphone;"></iframe> */}
+          <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d%22%3E"></iframe>
         </Col>
       </Row>
+    
+      <div className="footer">
+        <Row className="no-margin">
+          <Col>
+            hello
+          </Col>
+        </Row>
+        <Row className="no-margin">
+          <Col>
+            Copyright 2021
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 }
