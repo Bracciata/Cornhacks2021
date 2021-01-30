@@ -4,21 +4,22 @@ var keyword_extractor = require("keyword-extractor");
 var Sentiment = require('sentiment');
 var sentiment = new Sentiment();
 
+
+
 // This categories variables is referneced later.
 let categories = []
 
 // The following function is for the complex Get Support intent.
 class Category {
-    constructor(keywords, resources,name,assistance_phrases) {
+    constructor(keywords, resources, name, assistance_phrases) {
         this.keywords = keywords;
         this.resources = resources;
         this.name = name;
-        this.assistance_phrases=assistance_phrases;
+        this.assistance_phrases = assistance_phrases;
     }
 }
 
 function setCategories() {
-
     const youth = new Category();
     youth.keywords = ["teen", "teens", "minor", "adolescence", "child", "young", "youth", "puberty", "youngness", "middle school", "elementary", "high school", "teenager", "boy", "girl", "kid"];
     youth.resources = ["https://youmatter.suicidepreventionlifeline.org/", "https://www.activeminds.org/", "https://www.thetrevorproject.org/", "https://www.loveisrespect.org/"];
@@ -27,7 +28,7 @@ function setCategories() {
     categories.push(youth);
 
     const disaster_survivors = new Category();
-    disaster_survivors.keywords = ["disaster", "flood", "typhoon", "storm", "storm surge", "earthquake", "fire", "cyclone", "hurricane", "drought", "snow", "thunderstorm", "thunder", "lightning", "volcano", "landslide", "tsunami", "tornadoes", "avalanche", "blizzard", "meteorite", "hail", "sinkhole", "riot", "terrorist"];
+    disaster_survivors.keywords = ["disaster", "flood", "typhoon", "storm", "storm surge", "earthquake", "fire", "cyclone", "hurricane", "drought", "snow", "thunderstorm", "thunder", "lightning", "volcano", "landslide", "tsunami", "tornadoes", "avalanche", "blizzard", "meteorite", "hail", "sinkhole", "riot", "terrorist","bomb"];
     disaster_survivors.resources = ["https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.ready.gov/coping-disaster"];
     disaster_survivors.name = "disaster survivor"
     disabled_individuals.assistance_phrases = ["You are not alone. We are greatful that you have survived through your hardship. To help you move forward, please consider ", "I know things look bleak right now, but theres are going to get better. This too shall pass. To help, consider ", "I understand that you're upset. That's a normal and natural reaction to this situation. I believe that you can get through this. To help, consider "];
@@ -48,14 +49,14 @@ function setCategories() {
     categories.push(veterans);
 
     const loss_survivors = new Category();
-    loss_survivors.keywords = ["death", "family", "friend", "loss", "loved one", "son", "daughter", "mother", "father", "grandparents", "grandmother", "grandfather", "wife", "husband", "child", "mom", "dad"];
+    loss_survivors.keywords = ["parent","aunt","uncle","death", "family", "friend", "loss", "loved one", "son", "daughter", "mother", "father", "grandparents", "grandmother", "grandfather", "wife", "husband", "child", "mom", "dad"];
     loss_survivors.resources = ["http://www.personalgriefcoach.net/", "https://save.org/what-we-do/grief-support/", "https://afsp.org/ive-lost-someone", "http://www.survivorsofsuicide.com/help_heal.shtml"];
     loss_survivors.name = "Loss Survivor";
     loss_survivors.assistance_phrases = ["I am sorry for your loss, times like these could be hard. Understand that there are always resources to help. Consider ", "We all need help at times like this, I am here for you. When you are ready to move forward, take small sets at a time and remember that you will see a brighter day. To help, consider "];
     categories.push(loss_survivors);
 
     const LGBTQ = new Category();
-    LGBTQ.keywords = ["lesbian", "gay", "transgender", "cisgender", "homosexual", "homophile", "queer", "intersex", "agender", "androgyny", "androsexual", "aromantic", "bi", "bigender", "bisexual", "coming out", "lbgtq", "trans", "transgender", "transitioning"];
+    LGBTQ.keywords = ["asexual","nonbinary","gender","lesbian", "gay", "transgender", "cisgender", "homosexual", "homophile", "queer", "intersex", "agender", "androgyny", "androsexual", "aromantic", "bi", "bigender", "bisexual", "coming out", "lbgtq", "trans", "transgender", "transitioning"];
     LGBTQ.resources = ["https://www.plannedparenthood.org/learn", "https://www.glaad.org/publications/talkingabout/terminology", "https://youmatter.suicidepreventionlifeline.org/how-to-be-an-ally/", "https://itgetsbetter.org/"];
     LGBTQ.name = "LGBTQ";
     LGBTQ.assistance_phrases = ["Times like these could be diffuclt, just know that I support you. It's always small steps at a time from here. You can learn more at ", "Know that times like these could be very hard, but there is always a brighter day. Know that there are resources like ", "I support you. Know that there are resources like "];
@@ -69,14 +70,14 @@ function setCategories() {
     categories.push(attempted_survivors);
 
     const disabled_individuals = new Category();
-    disabled_individuals.keywords = ["disabilities", "disable", "injured", "impairment", "impaired", "disease", "disorder", "incapable", "special needs", "illness", "condition", "dysfunction", "attention deficit hyperactivity disorder", "adhd", "mobility disabled", "heart", "lung", "respiratory", "mental illness", "depression", "diabetes", "stroke", "cancer"];
+    disabled_individuals.keywords = ["disability","abled","disabilities", "disable", "injured", "impairment", "impaired", "disease", "disorder", "incapable", "special needs", "illness", "condition", "dysfunction", "attention deficit hyperactivity disorder", "adhd", "mobility disabled", "heart", "lung", "respiratory", "mental illness", "depression", "diabetes", "stroke", "cancer"];
     disabled_individuals.resources = ["http://liveon.net/", "https://www.usa.gov/disability-financial-support", "https://www.aapd.com/"];
     disabled_individuals.name = "disabled";
     disabled_individuals.assistance_phrases = ["Thanks for sharing that with me. It could be very diffcult at times like these. Know that there are resources like ", "It's not always easy, but know that there are resources out there to help. When you are ready, look at ", "This can definitely be a hard time. Resources like RESOURCE can be helpful."];
     categories.push(disabled_individuals);
 
     const ptsd = new Category();
-    ptsd.keywords = ["trauma", "traumatic", "stress", "battle fatigue", "shell-shock", "railway spines", "disorder"];
+    ptsd.keywords = ["flash back","trauma", "traumatic", "stress", "battle fatigue", "shell-shock", "railway spines", "disorder"];
     ptsd.resources = ["https://www.ptsd.va.gov/index.asp", "https://adaa.org/understanding-anxiety/posttraumatic-stress-disorder-ptsd/resources"];
     ptsd.name = "PTSD";
     ptsd.assistance_phrases = ["Times like these are hard. I recommend looking at ", "These are definitely difficult times. Remember that you can always look at ", "Times like these, are hard consider these "];
@@ -117,18 +118,25 @@ function getSentimentScore(query) {
 }
 
 function generateResponse(keywords) {
+    // The following code determines what the user is suffering from based on their querys keywords and the grabs a respective resource and statement to be used when building the response.
+    let suffering_from = [];
+    let response_statemets = [];
+    let response_resources = [];
     for (var word of keywords) {
         for (var category of categories) {
             for (var categoryWord of category.keywords) {
-                if (word.toLowerCase() == categoryWord) {
-                    // TODO: add them to the list the user is suffering with and do not add it twice.
-                    console.log(category.name);
-                }else if(categoryWord.includes(word.toLowerCase())){
-                    console.log(category.name);
+                if (!suffering_from.includes(category.name)) {
+                    if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
+                        suffering_from.push(category.name);
+                        response_statemets.push(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
+                        response_resources.push(category.resources[Math.floor(Math.random() * category.resources.length)]);
+                    }
                 }
             }
         }
     }
+    console.log("The user is suffering from: " + suffering_from);
+    // Build the response based on what they are suffering from and randomly selected associated responses and resources.
 }
 
 // The following function is for the complex Get Support intent.
@@ -136,13 +144,15 @@ function support(agent) {
     let query = agent.query;
     console.log("The user stated: " + query);
     let keywords = getKeywords(query);
-    let sentimentScore = getSentimentScore(query);
+    let sentiment_score = getSentimentScore(query);
     let response = generateResponse(keywords);
     // The following is replaced by agent.add instead of console.log when inside of Dialogflow.
 
-    console.log('Here to help!');
+    console.log(response);
 
 }
+
+
 setCategories();
 
 
