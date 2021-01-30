@@ -13,10 +13,10 @@ function support(agent) {
         return_changed_case: true,
         remove_duplicates: false
     });
-    console.log("The keywords are: " + extraction_result);
+    extraction_result.length == 1 ? console.log("The keyword is: " + extraction_result) : console.log("The keywords are: " + extraction_result);
     var analysis_result = sentiment.analyze(query);
     console.log("The sentiment of the statement was: " + JSON.stringify(analysis_result));
-    // The following is replaced by agent.add instead of console.log
+    // The following is replaced by agent.add instead of console.log when inside of Dialogflow.
     console.log('Here to help!');
 
 }
