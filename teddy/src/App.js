@@ -4,19 +4,21 @@ import { Container, Row, Col, Navbar } from 'react-bootstrap';
 
 function App() {
   return (
-    <Container fluid>
-      <Navbar bg="dark" variant="dark" expand="lg">
+    <Container fluid className="no-padding">
+      <Navbar className="navbar">
         <Navbar.Brand href="#home">
-          Teddy
+        <div className="logo">
+          <img
+              alt="Teddy Logo"
+              src="/logo.svg"
+              width="70"
+              height="70"
+              className="d-inline-block align-top"
+            />{' '}
+            Teddy
+          </div>
         </Navbar.Brand>
       </Navbar>
-      <img
-            alt="Teddy Logo"
-            src="/logo.svg"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-          />
       <Row>
         <Col>
           <iframe
