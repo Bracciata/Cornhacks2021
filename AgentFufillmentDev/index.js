@@ -9,10 +9,11 @@ let categories = []
 
 // The following function is for the complex Get Support intent.
 class Category {
-    constructor(keywords, resources,name) {
+    constructor(keywords, resources,name,assistance_phrases) {
         this.keywords = keywords;
         this.resources = resources;
         this.name = name;
+        this.assistance_phrases=assistance_phrases;
     }
 }
 
@@ -22,6 +23,7 @@ function setCategories() {
     youth.keywords = ["teen", "teens", "minor", "adolescence", "child", "young", "youth", "puberty", "youngness", "middle school", "elementary", "high school", "teenager", "boy", "girl", "kid"];
     youth.resources = ["https://youmatter.suicidepreventionlifeline.org/", "https://www.activeminds.org/", "https://www.thetrevorproject.org/", "https://www.loveisrespect.org/"];
     youth.name = "youth";
+    youth.assistance_phrases = ["I understand the struggles of being a youth may I reccomend you check out "];
     categories.push(youth);
 
     const disaster_survivors = new Category();
@@ -111,7 +113,7 @@ function generateResponse(keywords) {
         for (var category of categories) {
             for (var categoryWord of category.keywords) {
                 if (word.toLowerCase() == categoryWord) {
-                    // TODO add them to the list the user is suffering with and do not add it twice.
+                    // TODO: add them to the list the user is suffering with and do not add it twice.
                     console.log(category.name);
                 }else if(categoryWord.includes(word.toLowerCase())){
                     console.log(category.name);
