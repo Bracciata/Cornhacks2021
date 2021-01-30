@@ -31,7 +31,7 @@ function setCategories() {
     disaster_survivors.keywords = ["disaster", "flood", "typhoon", "storm", "storm surge", "earthquake", "fire", "cyclone", "hurricane", "drought", "snow", "thunderstorm", "thunder", "lightning", "volcano", "landslide", "tsunami", "tornadoes", "avalanche", "blizzard", "meteorite", "hail", "sinkhole", "riot", "terrorist","bomb"];
     disaster_survivors.resources = ["https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.ready.gov/coping-disaster"];
     disaster_survivors.name = "disaster survivor"
-    disabled_individuals.assistance_phrases = ["You are not alone. We are greatful that you have survived through your hardship. To help you move forward, please consider RESOURCE.", "I know things look bleak right now, but theres are going to get better. This too shall pass. To help, consider RESOURCE.", "I understand that you're upset. That's a normal and natural reaction to this situation. I believe that you can get through this. To help, consider RESOURCE."];
+    disaster_survivors.assistance_phrases = ["You are not alone. We are greatful that you have survived through your hardship. To help you move forward, please consider RESOURCE.", "I know things look bleak right now, but theres are going to get better. This too shall pass. To help, consider RESOURCE.", "I understand that you're upset. That's a normal and natural reaction to this situation. I believe that you can get through this. To help, consider RESOURCE."];
     categories.push(disaster_survivors);
 
     const native_americans = new Category();
