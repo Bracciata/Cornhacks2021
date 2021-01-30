@@ -1,5 +1,5 @@
 a {
-  color: #ebae7f !important;
+  color: #f9e6d8 !important;
 }
 
 .no-padding {
@@ -11,8 +11,9 @@ a {
 }
 
 .navbar {
-  background-color: #414b50;
+  background-color: #3a4348;
   height: 12vh;
+  text-decoration: none !important;
 }
 
 .logo {
@@ -32,14 +33,23 @@ a {
   text-align: center;
   padding: 10px;
   height: 5vh;
+  font-weight: 500;
 }
 
 .link {
-  color: #755037 !important;
+  color: black !important;
+}
+
+.link-underline:hover {
+  font-weight: 700;
+}
+
+.link-underline {
+  text-decoration: underline !important;
 }
 
 .footer-body {
-  background-color: #414b50;
+  background-color: #3a4348;
   color: white;
   text-align: right;
   padding: 10px;
