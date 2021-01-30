@@ -1,8 +1,3 @@
-// The following imports are also available on dialogflow but not to be copied between the two.
-var keyword_extractor = require("keyword-extractor");
-var Sentiment = require('sentiment');
-var sentiment = new Sentiment();
-
 // The following function is for the complex Get Support intent.
 class Category {
     constructor(keywords, resources){
@@ -74,6 +69,12 @@ function setCategories() {
 
 
 
+// The following imports are also available on dialogflow but not to be copied between the two.
+var keyword_extractor = require("keyword-extractor");
+var Sentiment = require('sentiment');
+var sentiment = new Sentiment();
+
+// The following function is for the complex Get Support intent.
 function support(agent) {
     let query = agent.query;
     console.log("The user stated: " + query);
