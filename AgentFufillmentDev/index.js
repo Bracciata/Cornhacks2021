@@ -93,6 +93,8 @@ function setCategories() {
     homeless_individuals.keywords = ["homeless", "foodless", "refugee", "displaced", "vagrant", "bankrupt", "beg", "poor", "poverty", "unemployed", "streets"];
     homeless_individuals.resources = ["https://www.211.org/", "http://nationalhomeless.org/references/need-help/", "https://www.feedingamerica.org/find-your-local-foodbank"];
     homeless_individuals.name = "Homeless";
+    homeless_individuals.assistance_phrases = ["Times like these are hard for many financially. I recommend looking at RESOURCE.", "I respect your courage to continue fighting I believe RESOURCE may be able to help you.", "You are not alone in financial struggles try looking to RESOURCE."];
+
     categories.push(homeless_individuals);
 
     console.log(categories);
