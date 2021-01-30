@@ -1,3 +1,9 @@
+
+// The following imports are also available on dialogflow but not to be copied between the two.
+var keyword_extractor = require("keyword-extractor");
+var Sentiment = require('sentiment');
+var sentiment = new Sentiment();
+
 // The following function is for the complex Get Support intent.
 class Category {
     constructor(keywords, resources){
@@ -54,10 +60,10 @@ function setCategories() {
     ptsd.resources = ["https://www.ptsd.va.gov/index.asp", "https://adaa.org/understanding-anxiety/posttraumatic-stress-disorder-ptsd/resources"];
     categories.push(ptsd);
 
-    const addition = new Category();
-    addition.keywords = ["Addicted", "drugs", "smoke", "drink", "alcohol", "weed", "stimulants", "depressants", "cocaine", "heroin", "opiums", "painkillers", "cigarette", "beer", "medications", "overdose", "marijuana", "LSD", "crach"];
-    addition.resources = ["https://www.samhsa.gov/find-help/national-helpline", "https://www.helpguide.org/home-pages/addictions.htm"];
-    categories.push(addition);
+    const addiction = new Category();
+    addiction.keywords = ["Addicted", "drugs", "smoke", "drink", "alcohol", "weed", "stimulants", "depressants", "cocaine", "heroin", "opiums", "painkillers", "cigarette", "beer", "medications", "overdose", "marijuana", "LSD", "crach"];
+    addiction.resources = ["https://www.samhsa.gov/find-help/national-helpline", "https://www.helpguide.org/home-pages/addictions.htm"];
+    categories.push(addiction);
 
     const homeless_individuals = new Category();
     homeless_individuals.keywords = ["Homeless", "foodless", "refugee", "displaced", "vagrant", "bankrupt", "beg", "poor", "poverty", "unemployed", "streets"];
@@ -67,10 +73,6 @@ function setCategories() {
     console.log(categories);
 }
 
-// The following imports are also available on dialogflow but not to be copied between the two.
-var keyword_extractor = require("keyword-extractor");
-var Sentiment = require('sentiment');
-var sentiment = new Sentiment();
 
 // The following function uses the keyword extractor package to pull out the keywords as a list from the query.
 function getKeywords(query) {
