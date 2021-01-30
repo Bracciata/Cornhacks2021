@@ -2,6 +2,10 @@
   padding: 0px !important;
 }
 
+.no-margin {
+  margin: 0px !important;
+}
+
 .navbar {
   background-color: #414b50;
 }

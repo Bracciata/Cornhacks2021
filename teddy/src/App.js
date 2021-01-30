@@ -19,7 +19,7 @@ function App() {
           </div>
         </Navbar.Brand>
       </Navbar>
-      <Row>
+      <Row className="no-margin">
         <Col>
           <iframe
             allow="microphone;"
