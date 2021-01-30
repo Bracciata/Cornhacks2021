@@ -27,7 +27,7 @@ function setCategories() {
     categories.push(youth);
 
     const disaster_survivors = new Category();
-    disaster_survivors.keywords = ["disaster", "flood", "typhoon", "storm", "storm surge", "earthquake", "fire", "cyclone", "hurricane", "drought", "snow", "thunderstorm", "thunder", "lightning", "volcano", "landslide", "tsunami", "tornadoes", "avalanche", "blizzard", "meteorite", "hail", "sinkhole", "riot", "terrorist"];
+    disaster_survivors.keywords = ["disaster", "flood", "typhoon", "storm", "storm surge", "earthquake", "fire", "cyclone", "hurricane", "drought", "snow", "thunderstorm", "thunder", "lightning", "volcano", "landslide", "tsunami", "tornadoes", "avalanche", "blizzard", "meteorite", "hail", "sinkhole", "riot", "terrorist","bomb"];
     disaster_survivors.resources = ["https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.samhsa.gov/find-help/disaster-distress-helpline", "https://www.ready.gov/coping-disaster"];
     disaster_survivors.name = "disaster survivor"
     categories.push(disaster_survivors);
@@ -45,13 +45,13 @@ function setCategories() {
     categories.push(veterans);
 
     const loss_survivors = new Category();
-    loss_survivors.keywords = ["death", "family", "friend", "loss", "loved one", "son", "daughter", "mother", "father", "grandparents", "grandmother", "grandfather", "wife", "husband", "child", "mom", "dad"];
+    loss_survivors.keywords = ["parent","aunt","uncle","death", "family", "friend", "loss", "loved one", "son", "daughter", "mother", "father", "grandparents", "grandmother", "grandfather", "wife", "husband", "child", "mom", "dad"];
     loss_survivors.resources = ["http://www.personalgriefcoach.net/", "https://save.org/what-we-do/grief-support/", "https://afsp.org/ive-lost-someone", "http://www.survivorsofsuicide.com/help_heal.shtml"];
     loss_survivors.name = "Loss Survivor";
     categories.push(loss_survivors);
 
     const LGBTQ = new Category();
-    LGBTQ.keywords = ["lesbian", "gay", "transgender", "cisgender", "homosexual", "homophile", "queer", "intersex", "agender", "androgyny", "androsexual", "aromantic", "bi", "bigender", "bisexual", "coming out", "lbgtq", "trans", "transgender", "transitioning"];
+    LGBTQ.keywords = ["asexual","nonbinary","gender","lesbian", "gay", "transgender", "cisgender", "homosexual", "homophile", "queer", "intersex", "agender", "androgyny", "androsexual", "aromantic", "bi", "bigender", "bisexual", "coming out", "lbgtq", "trans", "transgender", "transitioning"];
     LGBTQ.resources = ["https://www.plannedparenthood.org/learn", "https://www.glaad.org/publications/talkingabout/terminology", "https://youmatter.suicidepreventionlifeline.org/how-to-be-an-ally/", "https://itgetsbetter.org/"];
     LGBTQ.name = "LGBTQ";
     categories.push(LGBTQ);
@@ -63,13 +63,13 @@ function setCategories() {
     categories.push(attempted_survivors);
 
     const disabled_individuals = new Category();
-    disabled_individuals.keywords = ["disabilities", "disable", "injured", "impairment", "impaired", "disease", "disorder", "incapable", "special needs", "illness", "condition", "dysfunction", "attention deficit hyperactivity disorder", "adhd", "mobility disabled", "heart", "lung", "respiratory", "mental illness", "depression", "diabetes", "stroke", "cancer"];
+    disabled_individuals.keywords = ["disability","abled","disabilities", "disable", "injured", "impairment", "impaired", "disease", "disorder", "incapable", "special needs", "illness", "condition", "dysfunction", "attention deficit hyperactivity disorder", "adhd", "mobility disabled", "heart", "lung", "respiratory", "mental illness", "depression", "diabetes", "stroke", "cancer"];
     disabled_individuals.resources = ["http://liveon.net/", "https://www.usa.gov/disability-financial-support", "https://www.aapd.com/"];
     disabled_individuals.name = "disabled";
     categories.push(disabled_individuals);
 
     const ptsd = new Category();
-    ptsd.keywords = ["trauma", "traumatic", "stress", "battle fatigue", "shell-shock", "railway spines", "disorder"];
+    ptsd.keywords = ["flash back","trauma", "traumatic", "stress", "battle fatigue", "shell-shock", "railway spines", "disorder"];
     ptsd.resources = ["https://www.ptsd.va.gov/index.asp", "https://adaa.org/understanding-anxiety/posttraumatic-stress-disorder-ptsd/resources"];
     ptsd.name = "PTSD";
     categories.push(ptsd);
@@ -120,12 +120,13 @@ function generateResponse(keywords) {
                     if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
                         sufferingFrom.add(category.name);
                         responseStatemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
-                        responseResources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);   
+                        responseResources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);
                     }
                 }
             }
         }
     }
+    console.log("The user is suffering from: " + sufferingFrom);
 }
 
 // The following function is for the complex Get Support intent.
@@ -137,7 +138,7 @@ function support(agent) {
     let response = generateResponse(keywords);
     // The following is replaced by agent.add instead of console.log when inside of Dialogflow.
 
-    console.log('Here to help!');
+    console.log(response);
 
 }
 setCategories();
