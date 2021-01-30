@@ -110,23 +110,23 @@ function getSentimentScore(query) {
 
 function generateResponse(keywords) {
     // The following builds a randomly selected list of responses with resources based on what the user is experiencing in life.
-    let sufferingFrom = [];
-    let responseStatemets = [];
-    let responseResources = [];
+    let suffering_from = [];
+    let response_statemets = [];
+    let response_resources = [];
     for (var word of keywords) {
         for (var category of categories) {
             for (var categoryWord of category.keywords) {
-                if (!sufferingFrom.includes(category.name)) {
+                if (!suffering_from.includes(category.name)) {
                     if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
-                        sufferingFrom.add(category.name);
-                        responseStatemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
-                        responseResources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);
+                        suffering_from.add(category.name);
+                        response_statemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
+                        response_resources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);
                     }
                 }
             }
         }
     }
-    console.log("The user is suffering from: " + sufferingFrom);
+    console.log("The user is suffering from: " + suffering_from);
 }
 
 // The following function is for the complex Get Support intent.
@@ -134,7 +134,7 @@ function support(agent) {
     let query = agent.query;
     console.log("The user stated: " + query);
     let keywords = getKeywords(query);
-    let sentimentScore = getSentimentScore(query);
+    let sentiment_score = getSentimentScore(query);
     let response = generateResponse(keywords);
     // The following is replaced by agent.add instead of console.log when inside of Dialogflow.
 
