@@ -22,22 +22,18 @@ function App() {
 
       <Row className="no-margin">
         <Col xs={{ span: 8, offset: 2 }}>
-          {/* <iframe className="iframe" allow="microphone;"></iframe> */}
-          <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d%22%3E"></iframe>
+          <iframe width="100%" height="78vh" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d"></iframe>
         </Col>
       </Row>
     
       <div className="footer">
-        <Row className="no-margin">
-          <Col>
-            hello
-          </Col>
-        </Row>
-        <Row className="no-margin">
-          <Col>
-            Copyright 2021
-          </Col>
-        </Row>
+        <div className="footer-header">
+          National Suicide Prevention Lifeline: <a href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+        </div>
+        <div className="footer-body">
+          <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Copyright ©2021</div>
+        </div>
       </div>
     </Container>
   );
