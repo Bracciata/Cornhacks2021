@@ -10,11 +10,11 @@ Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the i
 
 ![Image of Dialog Flow](TeddyMedia/Teddy3-2Image.png)
 
-## About
+## About Page
 
 ![Image of About Page](TeddyMedia/About.png)
 
-## Resources
+## Resources Page
 
 ![Image of Resources Page](TeddyMedia/Resources3-2.png)
 
