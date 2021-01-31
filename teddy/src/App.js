@@ -152,6 +152,24 @@ function Resources() {
         <Container fluid className="resources-body">
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Attempt Survivors</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                Coping with the deep hurt after surviving a suicide attempt and finding hope is possible. The Lifeline is available for support, 24/7.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Lifeline for Attempt Survivors: <a className="resource-link resource-link-underline" href="https://lifelineforattemptsurvivors.org/">https://lifelineforattemptsurvivors.org/</a></li>
+                  <li>A Journey Toward Health and Hope: Your Handbook for Recovery Ater a Suicide Attempt: <a className="resource-link resource-link-underline" href="https://store.samhsa.gov/product/A-Journey-Toward-Health-and-Hope-Your-Handbook-for-Recovery-After-a-Suicide-Attempt/SMA15-4419">https://store.samhsa.gov/product/A-Journey-Toward-Health-and-Hope-Your-Handbook-for-Recovery-After-a-Suicide-Attempt/SMA15-4419</a></li>
+                  <li>American Association of Suicidology: <a className="resource-link resource-link-underline" href="https://suicidology.org/">https://suicidology.org/</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+          
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Disaster Survivors</div>
             </Col>
             <Col xs={8}>
