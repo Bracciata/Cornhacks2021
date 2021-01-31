@@ -196,5 +196,5 @@ function support(agent) {
 
 // The following is not located within the live Dialogflow Index folder.
 // To run a different query update the string below.
-let agent = { query: "I need help with age" };
+let agent = { query: "Get help with my addiction and homelessness" };
 support(agent);
