@@ -2,22 +2,37 @@ import './App.css';
 import React, { ReactDOM } from 'react';
 import { Container, Row, Col, Navbar } from 'react-bootstrap';
 
+
 function App() {
   return (
     <AppBody />
-  )
-}
+    )
+  }
 
 
 class AppBody extends React.Component {
 
+
+  
   componentDidMount() {
-    const script = document.createElement("script");
-
-    script.src = "https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1";
-    script.async = true;
-
-    document.body.appendChild(script);
+    let deleteEle = document.getElementById('top-head-subtitle');
+    console.log(deleteEle);
+    var checkExist = setInterval(function() {
+      if( document.getElementById('chatbox')) {
+         console.log("Exists!");
+         var checkExistTwo = setInterval(function() {
+          if( document.getElementById('chatbox')) {
+             console.log("Exists!");
+             clearInterval(checkExistTwo);
+          }else{
+            console.log('Does not exist');
+          }
+       }, 500);
+         clearInterval(checkExist);
+      }else{
+        console.log('Does not exist');
+      }
+   }, 500);
   }
 
 
@@ -38,16 +53,9 @@ class AppBody extends React.Component {
         </Navbar.Brand>
       </Navbar>
 
-      <Row className="no-margin">
+      <Row className="no-margin" style={{background:"#171717"}}>
         <Col xs={{ span: 8, offset: 2 }}>
-
-<df-messenger
-  chat-icon="https:&#x2F;&#x2F;storage.googleapis.com&#x2F;cloudprod-apiai&#x2F;93bdf5de-e0ef-4bb3-8570-5977c2802a6a_x.png"
-  intent="WELCOME"
-  chat-title="Teddy"
-  agent-id="baacb116-5167-4c03-b8e3-ee85a43bb82d"
-  language-code="en"
-></df-messenger>
+        <embed id="chatbox" src="https://teddy-gbcm.web.ushaflow.io/" style={{width:"100%", height: "100%"}}/>
 
         </Col>
       </Row>
