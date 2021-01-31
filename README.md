@@ -39,18 +39,19 @@
 
 ## Screenshots
 
-### Dialog Flow
+### Dialog Flow (1)
 ![Image of Main Page](TeddyMedia/Main3-2.png)
 
-### About Page
+### Dialog Flow (2)
 ![Image of Dialog Flow](TeddyMedia/Teddy3-2Image.png)
 
-### Resources Page
+### About Page
 ![Image of About Page](TeddyMedia/About.png)
 
-### Google Assistant
+### Resources Page
 ![Image of Resources Page](TeddyMedia/Resources3-2.png)
 
+### Google Assistant
 #### Mobile View
 ![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
 
