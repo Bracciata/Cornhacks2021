@@ -3,7 +3,6 @@ import reactRouterDom, { BrowserRouter as Router, Switch, Route, Link } from "re
 
 import React, { ReactDOM } from 'react';
 import { Container, Row, Col, Navbar, Form, Button, Nav } from 'react-bootstrap';
-import { Client } from 'dialogflow-gateway'
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Chat from "./chat";
