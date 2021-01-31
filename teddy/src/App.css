@@ -183,25 +183,91 @@ p:before, p:after {
 		border-bottom-right-radius: 16px 14px;
 		-webkit-transform:translate(0, -2px);
 		        transform:translate(0, -2px);
-	}
-.from-them:after {
-		left:4px;
-		width:26px;
-		background:white;
-		border-bottom-right-radius: 10px;
-		-webkit-transform:translate(-30px, -2px);
-		        transform:translate(-30px, -2px);
   }
-  #root > div > div.no-margin.row > div > div > div > p{
-    height: fit-content;
-  }
-  #root > div > nav > a{
-    width:fit-content;
-  }
-  button{
-    width: 18%;
+  
+/* Resources Page */
+.resources-body {
+  background-color: #b9bbc5;
+}
 
-  }
-  a:hover {
-    text-decoration: underline;
+.resource-category {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.resource-description {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.resources-list {
+  font-size: 18px;
+}
+
+.resource-link {
+  color: black !important;
+}
+
+.resource-link-underline:hover {
+  font-weight: 500;
+}
+
+.resource-link-underline {
+  text-decoration: underline !important;
+}
+
+/* About Page */
+.about-body {
+  background-color: #b9bbc5;
+}
+
+.about-header {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.about-paragraph {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.about-list {
+  font-size: 18px;
+  padding-bottom: 5px;
+  padding-right: 15;
+  padding-left: 100px;
+}
+
+.about-link {
+  color: black !important;
+}
+
+.about-link-underline:hover {
+  font-weight: 500;
+}
+
+.about-link-underline {
+  text-decoration: underline !important;
+}
+
+.about-image {
+    color: white;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-right: auto;
+    padding-left: 100px;
+    width: 600px;
+    height: 400px;
+    padding-top: 20px;
 }
