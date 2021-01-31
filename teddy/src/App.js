@@ -31,13 +31,13 @@ class AppBody extends React.Component {
               <div className="logo-text">Teddy</div>
 
               </div>
-</Navbar.Brand>
+            </Navbar.Brand>
 
               <Nav className="ml-auto">
                 <Link to="/about" className="nav-option">About</Link>
                 <Link to="/resources" className="nav-option">Resources</Link>
               </Nav>
-      </Navbar>
+          </Navbar>
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -49,7 +49,7 @@ class AppBody extends React.Component {
                 <Resources />
               </Route>
             </Switch>
-      </Router>
+        </Router>
           <div className="footer">
             <div className="footer-header">
               National Suicide Prevention Lifeline: <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
