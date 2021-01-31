@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "teddy-gbcm",
+  "private_key_id": "9ca06558066f4817d42e64ba78b41f398f15a0b7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCoTWh49q5T1Qr2\nChXiGzFPlgTVaTBQ9V27VJA57mtUWihAeC1he9DluHIlgYh5wG9RlFT7A62gaGWd\n0wO1WeymeILLWQNCyhacwZDDOaSkVd9nOFHEgGUoDde6Vu5QzCTpr4wCrTo9zK5J\nTqPiapOr0/2uviy81b3d8qeSv/VUfxiCVe5RjjgvgKlSFyV8tifplDxfbP8UN2f7\nDfdpxj7Sa2DBpq1gP7eO0D9OjHnm2WBYBrL96aUgAf0yNhX2pt4o/NkmX/degh+g\nS+NDlAJFjZD3K2n7Y/1hKALMhpJ3hzE7hlz5lns2mvITWaHRpDrDxtm3uA23iMKF\ngi4cVbyJAgMBAAECggEAAZLE4IA1cnxG6TRm1N5T6G5nidz9HuPTgvBzYoGnhRpM\ndVSgrGBFYs35Df+acg4gUq11wU/2o+dKvEsDjJxncWOMg3ahgjkUTrxV5fSB8cHv\n8yc4+nXunCblYDnqUFAl1mQCxZtvDf9XfMEMfqdOgJhCrzGN02kWTvIZaqGHqCKX\nib5frgwmgajobqWM7IvDMum6n8pVBykeY58yOhQgLxaO/xB764j69xdOe59pGubc\nY5LqIR81aGVHdcnMWdDW43ymmdgP63stgZMNUOZYiWZwDAHQ2bd/8exUj30/pUnh\na0eJtj6uCbr/j8Vsok33jpqHk2c0FhULhYkRUGSBQQKBgQDcVXXnRapDKZo3QYH4\nFlEFvHRlUC0JYsoTU0qKz4dDid9+BrrzVCs4HMy92aTDOLi0Q9qxQ+XRdrWyCB9O\n0vNBbI9QbHb1QS//q7xEB3w+UGeOOWZN9Wa38A8O2f5XcE97J+zIo2E7xTWoCUAv\n58GyDq1k/lM3G8RJVHGcn7TfaQKBgQDDi8lOoymyHrGnFsDbCrkP7RjYqQS95C1b\nXamfQd5Da6ug3cc7w0oLy2eyoE1jL+2dKuw4My10LeOznxCDu7jVaEai/Z5PgSB9\nHZdV4RQiwAdXXAcmCdAIh5FNcbP8iwUFoeCTsj6SvQiR8ck2271xwim9dZr0iHMN\naeXSYC9wIQKBgQCQ+aJ0pEAdpRgV14KfLH/vWEr2BsU7ccco5BseLuL/q45krCUC\nypUNfNWy7awd0AqogiU5kkV7h7KSDAodoWvx1m6OKnAze8sLXYKo+IvlrJ4W1Ond\nzeTijpA543IZMor5rBF/CxGFdIOTp1KWstWeRU4OL9GtZxXGcku3FNa8UQKBgQCG\nJLi+R1PtKv034HYATYTSlhW7W4czNPqgeMpJxAfTPGOKgVmRd9Ct8qV6dllgN5rL\nfIx7qS//SROxPuc3V2nejCAY497cL3q4GbqdYUBM7mqa1TjaMVUS5N0awWt1TXDu\ngjPrXhVq2F6ur60XAvsctNOpcqoQIiK7CvBrtywTwQKBgFsE+PqGC4I1t96WNh1N\nasMvooDc1nOgkvErOV9e+/EcYfkc0Y8rAzzppvbYnxAhBzJMJ4UODzKIS2RAg79d\npy/eIAvrOCXpMX0gtQs2thsTs3xGIV64B8IU80Bo48icrYc3h9XMdrT9xr/gJZtD\nkBzI4XEDVaUCHUEQ1nLAm9G4\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflowapi@teddy-gbcm.iam.gserviceaccount.com",
+  "client_id": "107340265235844627768",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflowapi%40teddy-gbcm.iam.gserviceaccount.com"
+}

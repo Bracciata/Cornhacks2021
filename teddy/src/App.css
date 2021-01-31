@@ -66,3 +66,11 @@ a {
   padding: 10px;
   height: 9vh;
 }
+
+#botcopy-react-root > div > div{
+  display: flex;
+}
+.botcopy--fixed-wrapper--maximized{
+  height: 50%!important;
+  width: 50%!important;
+}
