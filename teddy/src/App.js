@@ -170,6 +170,24 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Native Americans</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                Depression and suicide affect people of all ages and populations, but Native American and Alaskan Native populations can be at a higher risk. If you’re struggling, the Lifeline is available to help, 24/7.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Suicide Prevention: Indian Health Service: <a className="resource-link resource-link-underline" href="https://www.ihs.gov/suicideprevention/">https://www.ihs.gov/suicideprevention/</a></li>
+                  <li>We R Native: <a className="resource-link resource-link-underline" href="https://www.wernative.org/articles/wanting-to-end-your-life">https://www.wernative.org/articles/wanting-to-end-your-life</a></li>
+                  <li>Center for Native American Youth at the Aspen Institute: <a className="resource-link resource-link-underline" href="https://www.aspeninstitute.org/programs/center-for-native-american-youth/">https://www.aspeninstitute.org/programs/center-for-native-american-youth/</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Youth</div>
             </Col>
             <Col xs={8}>
