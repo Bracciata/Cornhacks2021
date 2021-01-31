@@ -91,7 +91,7 @@ function setCategories() {
     categories.push(addiction);
 
     const homeless_individuals = new Category();
-    homeless_individuals.keywords = ["homeless", "foodless", "refugee", "displaced", "vagrant", "bankrupt", "beg", "poor", "poverty", "unemployed", "streets"];
+    homeless_individuals.keywords = ["homeless","homelessness", "foodless", "refugee", "displaced", "vagrant", "bankrupt", "beg", "poor", "poverty", "unemployed", "streets"];
     homeless_individuals.resources = ["https://www.211.org/", "http://nationalhomeless.org/references/need-help/", "https://www.feedingamerica.org/find-your-local-foodbank"];
     homeless_individuals.name = "Homeless";
     homeless_individuals.assistance_phrases = ["Times like these are hard for many financially. I recommend looking at RESOURCE . ", "I respect your courage to continue fighting I believe RESOURCE may be able to help you.", "You are not alone in financial struggles try looking to RESOURCE . "];
@@ -139,7 +139,7 @@ function generatePhrase(keyword, categories) {
     let resource = ''
     for (var category of categories) {
         for (var categoryWord of category.keywords) {
-            if (keyword.toLowerCase() == categoryWord || categoryWord.includes(keyword.toLowerCase())) {
+            if (keyword.toLowerCase() == categoryWord || categoryWord.includes(keyword.toLowerCase())|| keyword.includes(categoryWord.toLowerCase())) {
                 group = category.name;
                 statement = category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)];
                 resource = category.resources[Math.floor(Math.random() * category.resources.length)];
@@ -168,9 +168,12 @@ function generateResponse(keywords) {
     let response = "";
     for (var i = 0; i < suffering_from.length; i++) {
         phrase = response_statemets[i].replace("RESOURCE", response_resources[i]);;
+        if(i>0 && phrase.charAt(0)!="I"){
+            phrase = phrase.charAt(0).toLowerCase() + phrase.slice(1);
+        }
         response += phrase;
         if (i + 1 < suffering_from.length){
-            response += "In edition, ";
+            response += " In addition, ";
         } 
     }
     return response;
