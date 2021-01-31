@@ -51,7 +51,7 @@ class AppBody extends React.Component {
         </Router>
           <div className="footer">
             <div className="footer-header">
-              National Suicide Prevention Lifeline:  <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">  https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+              <span>National Suicide Prevention Lifeline:  <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">  https://suicidepreventionlifeline.org/</a> or (800)-273-8255</span>
             </div>
             <div className="footer-body">
               <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
