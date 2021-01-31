@@ -27,7 +27,7 @@
 * We learned how to connect Dialogflow to our React website
 
 ## What's next for Teddy?
-<p>Now that Teddy is operational, we hope to increase the number of categorical groups so that we can provide more accurate and helpful resources. Once enough data is collected, we would love to extend Teddy to international usage since suicide is a prevalent outside the United States as well. </p>
+<p>Now that Teddy is operational, we hope to increase the number of categorical groups so that we can provide more accurate and helpful resources. Once enough data is collected, we would love to extend Teddy to international usage since suicide is also prevalent outside the United States. </p>
 
 
 ![Image of Main Page](TeddyMedia/Main3-2.png)
