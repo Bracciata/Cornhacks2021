@@ -1,6 +1,8 @@
 import './App.css';
+import reactRouterDom, { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import React, { ReactDOM } from 'react';
-import { Container, Row, Col, Navbar, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Form, Button, Nav } from 'react-bootstrap';
 import { Client } from 'dialogflow-gateway'
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -12,7 +14,59 @@ function App() {
 }
 
 class AppBody extends React.Component {
+  render() {
+    return (
+      <Container fluid className="no-padding">
+        <Router>
+          <Navbar className="navbar">
+            <Navbar.Brand className="full-width" href="/">
+            <div className="logo">
+              <img
+                alt="Teddy Logo"
+                src="/logo.svg"
+                width="70"
+                height="70"
+                className="d-inline-block align-top"
+              />{' '}
+              <div className="logo-text">Teddy</div>
 
+              </div>
+</Navbar.Brand>
+
+              <Nav className="ml-auto">
+                <Link to="/about" className="nav-option">About</Link>
+                <Link to="/resources" className="nav-option">Resources</Link>
+              </Nav>
+      </Navbar>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/resources">
+                <Resources />
+              </Route>
+            </Switch>
+      </Router>
+          <div className="footer">
+            <div className="footer-header">
+              National Suicide Prevention Lifeline: <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+        </div>
+            <div className="footer-body">
+              <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div>Copyright ©2021</div>
+            </div>
+
+          </div>
+
+    </Container >
+    )
+  }
+}
+
+class Home extends React.Component{
   constructor(props) {
     super(props);
 
@@ -48,14 +102,14 @@ class AppBody extends React.Component {
         }
       }
     }
-    this.setState({currentMessage:""});
+    this.setState({ currentMessage: "" });
     axios.post(
       "https://teddy-gbcm.core.ushaflow.io", params).then((response) => {
         console.log(response.data.queryResult.fulfillmentText);
         console.log(response);
         let existingMessages = this.state.Messages;
-        existingMessages.push([1,response.data.queryResult.fulfillmentText]);
-        this.setState({Messages:existingMessages});
+        existingMessages.push([1, response.data.queryResult.fulfillmentText]);
+        this.setState({ Messages: existingMessages });
       });
   }
   //Custom is used for the first message so the user is greeted on page open.
@@ -75,52 +129,38 @@ class AppBody extends React.Component {
         console.log(response);
       });
   }
+ render(){return(
+        <Row className="no-margin" style={{ background: "#171717" }}>
+          <Col xs={{ span: 8, offset: 2 }}>
+            <div class="Chat-Container">
+              <Chat Messages={this.state.Messages}></Chat>
+              <Form style={{ display: "flex" }} onSubmit={this.sendMessage}>
+                <Form.Control placeholder="Your Message" value={this.state.currentMessage} onChange={this.handleChange} />
+                <Button variant="primary" type="submit">
+                  Send
+                </Button>
+              </Form>
+            </div>
+          </Col>
+        </Row>
 
-
-  render() {
-    return (<Container fluid className="no-padding">
-      <Navbar className="navbar">
-        <Navbar.Brand href="#home">
-          <div className="logo">
-            <img
-              alt="Teddy Logo"
-              src="/logo.svg"
-              width="70"
-              height="70"
-              className="d-inline-block align-top"
-            />{' '}
-            <div className="logo-text">Teddy</div>
-          </div>
-        </Navbar.Brand>
-      </Navbar>
-
-      <Row className="no-margin" style={{ background: "#171717" }}>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <div class="Chat-Container">
-            <Chat Messages={this.state.Messages}></Chat>
-            <Form style={{ display: "flex" }} onSubmit={this.sendMessage}>
-              <Form.Control placeholder="Your Message" value={this.state.currentMessage} onChange={this.handleChange} />
-              <Button variant="primary" type="submit">
-                Send
-  </Button>
-            </Form>
-          </div>
-        </Col>
-      </Row>
-
-      <div className="footer">
-        <div className="footer-header">
-          National Suicide Prevention Lifeline: <a className="link link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+  );
+ }
+}
+function Resources() {
+  return (
+        <div>
+          <h2>TEsts</h2>
         </div>
-        <div className="footer-body">
-          <div>Icons made by <a className="link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-          <div>Copyright ©2021</div>
-        </div>
-      </div>
+  );
+}
 
-    </Container >
-    )
-  }
+function About() {
+  return (
+        <div>
+          <h2>TEstsdsdsdsdsds</h2>
+        </div>
+  );
 }
 
 export default App;
