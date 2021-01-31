@@ -170,6 +170,25 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Loss Survivors</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                If you have lost a loved one to suicide, you are not alone. There are resources available to help survivors of suicide loss cope.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>After A Suicide Resource Directory: <a className="resource-link resource-link-underline" href="http://www.personalgriefcoach.net/">http://www.personalgriefcoach.net/</a></li>
+                  <li>What to Tell a Children After A Suicide: <a className="resource-link resource-link-underline" href="https://save.org/what-we-do/grief-support/">https://save.org/what-we-do/grief-support/</a></li>
+                  <li>I’ve Lost Someone: <a className="resource-link resource-link-underline" href="https://afsp.org/ive-lost-someone">https://afsp.org/ive-lost-someone</a></li>
+                  <li>Survivors of Suicide: Helping a Survivor Heal: <a className="resource-link resource-link-underline" href="http://www.survivorsofsuicide.com/help_heal.shtml">http://www.survivorsofsuicide.com/help_heal.shtml</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Native Americans</div>
             </Col>
             <Col xs={8}>
