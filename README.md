@@ -51,11 +51,11 @@
 ### Resources Page
 ![Image of Resources Page](TeddyMedia/Resources3-2.png)
 
-### Google Assistant
-#### Mobile View
+## Google Assistant
+### Mobile View
 ![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
 
-#### Web View
+### Web View
 ![Image of Google Assistant](TeddyMedia/google-assistant-view-light.png)
 
 ## Development
