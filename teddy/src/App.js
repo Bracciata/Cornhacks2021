@@ -1,11 +1,6 @@
 import './App.css';
 import React, { ReactDOM } from 'react';
 import { Container, Row, Col, Navbar } from 'react-bootstrap';
-import axios from "axios";
-import Messages from "./Messages";
-
-const dialogflow = require('@google-cloud/dialogflow');
-const auth = require('google-auth-library');
 
 function App() {
   return (
@@ -15,50 +10,16 @@ function App() {
 
 
 class AppBody extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state ={
-      responses:[],
-      currentMessage: ""
-    }
+
+  componentDidMount() {
+    const script = document.createElement("script");
+
+    script.src = "https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1";
+    script.async = true;
+
+    document.body.appendChild(script);
   }
 
-   handleMessageSubmit( message) {
-    const data = {
-      message
-    };
-
-    axios
-      .post("YOUR_BACKEND_URL", data)
-      .then(response => {
-        const responseData = {
-          text: response.data["message"]["fulfillmentText"] != "" ? response.data["message"]["fulfillmentText"] : "Sorry, I can't get it. Can you please repeat once?",
-          isBot: true
-        };
-
-        this.setState({responses:responses => [...responses, responseData]});
-      })
-      .catch(error => {
-        console.log("Error: ", error);
-      });
-  };
-
-   handleMessageChange(event) {
-    this.sestState({currentMessage:event.target.value});
-  };
-
-   handleSubmit( event) {
-    const message = {
-      text: this.state.currentMessage,
-      isBot: false
-    };
-    if (event.key == "Enter") {
-      this.sestState({response:responses => [...responses, message]});
-      this.handleMessageSubmit(message.text);
-      this.setState({currentMessage:""});
-    }
-    
-  };
 
   render() {
     return (<Container fluid className="no-padding">
@@ -79,25 +40,14 @@ class AppBody extends React.Component {
 
       <Row className="no-margin">
         <Col xs={{ span: 8, offset: 2 }}>
-        <div className="chatSection">
-      <div className="botContainer">
-        <div className="messagesContainer">
-          <Messages messages={this.state.responses} />
-        </div>
 
-        {/*The input section is 👇*/}
-        <div className="inputSection">
-          <input
-            type="text"
-            value={this.state.currentMessage}
-            onChange={this.handleMessageChange}
-            onKeyDown={this.handleSubmit}
-            placeholder="Say something..."
-            className="messageInputField"
-          />
-        </div>
-      </div>
-    </div>            
+<df-messenger
+  chat-icon="https:&#x2F;&#x2F;storage.googleapis.com&#x2F;cloudprod-apiai&#x2F;93bdf5de-e0ef-4bb3-8570-5977c2802a6a_x.png"
+  intent="WELCOME"
+  chat-title="Teddy"
+  agent-id="baacb116-5167-4c03-b8e3-ee85a43bb82d"
+  language-code="en"
+></df-messenger>
 
         </Col>
       </Row>
