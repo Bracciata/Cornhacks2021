@@ -223,6 +223,24 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category"> Homelessness</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                The definition of homelessness means not having a home. You don't have to be living on the street to be homeless - even if you have a roof over your head you can still be without a home. This may be because you don't have any rights to stay where you live or your home is unsuitable for you.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>2-1-1: <a className="resource-link resource-link-underline" href="https://www.211.org/">https://www.211.org/</a></li>
+                  <li>National Homeless: <a className="resource-link resource-link-underline" href="http://nationalhomeless.org/references/need-help/">http://nationalhomeless.org/references/need-help/</a></li>
+                  <li>Local Food Banks: <a className="resource-link resource-link-underline" href="https://www.feedingamerica.org/find-your-local-foodbank">https://www.feedingamerica.org/find-your-local-foodbank</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">LGBTQ+</div>
             </Col>
             <Col xs={8}>
