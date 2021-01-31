@@ -46,11 +46,11 @@
 
 ## Google Assistant
 
+### Mobile View
 ![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
-Mobile View
 
+### Web View
 ![Image of Google Assistant](TeddyMedia/google-assistant-view-light.png)
-Web View
 
 ## Development
 
