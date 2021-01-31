@@ -119,7 +119,7 @@ div.Chat-Container{
   height: calc(100% - 52px);
 }
 p {
-  max-width: 255px;
+  max-width: 40%;
   word-wrap: break-word;
   margin-bottom: 12px;
   line-height: 24px;
