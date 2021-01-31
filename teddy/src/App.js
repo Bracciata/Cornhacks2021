@@ -47,15 +47,15 @@ class AppBody extends React.Component {
                 <Resources />
               </Route>
             </Switch>
-      </Router>
+        </Router>
           <div className="footer">
             <div className="footer-header">
-              <span>National Suicide Prevention Lifeline: <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255</span>
-          </div>
-          <div className="footer-body">
-            <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            <div>Copyright ©2021</div>
-          </div>
+              <span>National Suicide Prevention Lifeline:  <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">  https://suicidepreventionlifeline.org/</a> or <a href="tel:8002738255"  className="link-footer-header link-underline">(800)-273-8255</a></span>
+            </div>
+            <div className="footer-body">
+              <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div>Copyright ©2021</div>
+            </div>
           </div>
 
     </Container >
