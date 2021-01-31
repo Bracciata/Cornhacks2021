@@ -152,6 +152,24 @@ function Resources() {
         <Container fluid className="resources-body">
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Disaster Survivors</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                The road to emotional recovery after a natural or human-caused disaster can be long, but you’re not alone.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Disaster Distress Helpline: <a className="resource-link resource-link-underline" href="https://www.samhsa.gov/find-help/disaster-distress-helpline">https://www.samhsa.gov/find-help/disaster-distress-helpline</a></li>
+                  <li>American Red Cross Recovery Guides: <a className="resource-link resource-link-underline" href="https://www.redcross.org/get-help/disaster-relief-and-recovery-services.html">https://www.redcross.org/get-help/disaster-relief-and-recovery-services.html</a></li>
+                  <li>Ready.gov: Coping with Disaster: <a className="resource-link resource-link-underline" href="https://www.ready.gov/coping-disaster">https://www.ready.gov/coping-disaster</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Youth</div>
             </Col>
             <Col xs={8}>

@@ -207,7 +207,10 @@ p:after {
 }
 
 .resource-description {
-  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-size: 20px;
 }
 
