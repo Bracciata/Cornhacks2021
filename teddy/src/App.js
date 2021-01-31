@@ -170,6 +170,24 @@ function Resources() {
           
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Disabilities</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                Life can be hard sometimes, and this is even more true for people living with disabilities. Young people with disabilities face bullying, youth and adults with disabilities can be forced into nursing facilities, and plenty of people and businesses still discriminate against us every day. Whether you were born with your disability, your disability has slowly progressed as you grew older, or you suddenly acquired your disability, the challenges you face are real. But you can get through them!
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>The Live On Movement: <a className="resource-link resource-link-underline" href="http://liveon.net/">http://liveon.net/</a></li>
+                  <li>Financial Assistance and Support Services for People with Disabilities: <a className="resource-link resource-link-underline" href="https://www.usa.gov/disability-financial-support">https://www.usa.gov/disability-financial-support</a></li>
+                  <li>The American Association of People with Disabilities: <a className="resource-link resource-link-underline" href="https://www.aapd.com/">https://www.aapd.com/</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Disaster Survivors</div>
             </Col>
             <Col xs={8}>
