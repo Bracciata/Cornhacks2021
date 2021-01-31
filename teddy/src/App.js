@@ -380,8 +380,7 @@ function About() {
             />{' '}
             <div className="about-paragraph">
               Among females, the suicide rate was highest for those aged 45-64 (10.2 per 100,000). 
-            </div>
-            <div className="about-paragraph">
+              <br></br>
               Among males, the suicide rate was highest for those aged 75 and older (39.9 per 100,000)
             </div>
         </Col>
@@ -395,9 +394,9 @@ function About() {
               className="about-image"
             />{' '}
             <div className="about-paragraph">
-              Suicide rates are not the same from state to state. Based on data from the CDC WISQARS Fatal
-              Injury Data Visualization Tool, Figure 4 shows a map of the United States with each state’s 
-              age-adjusted suicide rate in 2018 indicated by color.
+              The crude rates of suicide were highest for American Indian,
+              Non-Hispanic males (34.8 per 100,000) and females (10.5 per 100,000), 
+              followed by White, Non-Hispanic males (30.4 per 100,000) and females (8.3 per 100,000).
             </div>
         </Col>
       </Row>
