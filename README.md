@@ -1,8 +1,20 @@
-# Teddy
+# CornHacks2021- Teddy 
 
-The problem we identified for our project was the high number of suicides in the U.S. In 2019 alone, about 47,511 people died of suicide--which is 14.5 deaths per 100,000 population. Suicide was also ranked the 10th leading cause of death in 2019. To mitigate this problem, we wanted to create an application that would intervene in times of crisis. We decided to name this application Teddy. Teddy is a crisis intervention AI intended to step in during emergency situations. Our goal for Teddy is to intervene, assist, and provide comfort during user’s times of need.
+##### Created by Tommy Braccia, Danny Tran, and Emma Hubka
 
-Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the information needed to quickly and accurately direct users to helpful resources. Teddy extracts both sentiments and keywords to correctly identify what resources are the best fit for the person. After identification, Teddy successfully redirects individuals to the correct resources by providing them with positive reinforcement and necessary feedback immediately.
+## Inspiration
+<p>The problem we identified for our project was the high number of suicides in the U.S. In 2019 alone, about 47,511 people died of suicide--which is 14.5 deaths per 100,000 population. Suicide was also ranked the 10th leading cause of death in 2019. To mitigate this problem, we wanted to create an application that would intervene in times of crisis. We decided to name this application Teddy. Teddy is a crisis intervention AI intended to step in during emergency situations. Our goal for Teddy is to intervene, assist, and provide comfort during user’s times of need. </p>
+
+## What it does
+<p>Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the information needed to quickly and accurately direct users to helpful resources. Teddy extracts both sentiments and keywords to correctly identify what resources are the best fit for the person. After identification, Teddy successfully redirects individuals to the correct resources by providing them with positive reinforcement and necessary feedback immediately.</p>
+
+## What problems did we run into?
+
+## Accomplishments that we're proud of?
+
+## What we learned?
+
+## What's next for Teddy?
 
 ![Image of Main Page](TeddyMedia/Main3-2.png)
 
