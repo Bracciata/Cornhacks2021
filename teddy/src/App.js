@@ -1,23 +1,30 @@
 import './App.css';
 import React from 'react';
-import { Container, Row, Col, Navbar } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 
 function App() {
   return (
     <Container fluid className="no-padding">
       <Navbar className="navbar">
-        <Navbar.Brand href="#home">
-        <div className="logo">
-          <img
-              alt="Teddy Logo"
-              src="/logo.svg"
-              width="70"
-              height="70"
-              className="d-inline-block align-top"
-            />{' '}
+        <Navbar.Brand className="full-width" href="#home">
+          <div className="logo">
+            <img
+                alt="Teddy Logo"
+                src="/logo.svg"
+                width="70"
+                height="70"
+                className="d-inline-block align-top"
+              />{' '}
             <div className="logo-text">Teddy</div>
           </div>
         </Navbar.Brand>
+
+        <Nav className="ml-auto">
+          <Nav.Link className="nav-option" href="#home">Resources</Nav.Link>
+          <Nav.Link className="nav-option" href="#features">About</Nav.Link>
+        </Nav>
+            
+
       </Navbar>
 
       <Row className="no-margin">
@@ -30,10 +37,10 @@ function App() {
     
       <div className="footer">
         <div className="footer-header">
-          National Suicide Prevention Lifeline: <a className="link link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+          National Suicide Prevention Lifeline: <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
         </div>
         <div className="footer-body">
-          <div>Icons made by <a className="link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
           <div>Copyright ©2021</div>
         </div>
       </div>
