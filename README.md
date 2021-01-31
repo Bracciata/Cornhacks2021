@@ -1,8 +1,8 @@
 # Teddy
 
-The problem we identified for our project was the high number of suicides in the U.S. In 2019 alone 47,511 people died of suicide, which is 14.5 deaths per 100,000 population. Suicide was also ranked the 10th cause of death in 2019. To mitigate this problem, we decided we wanted to create an application that would intervene in times of crisis. We decided to name this application Teddy. Teddy is a crisis intervention AI intended to step in during emergency situations. Our goal is that Teddy is able to intervene, assist, and provide comfort during user’s times of need.
+The problem we identified for our project was the high number of suicides in the U.S. In 2019 alone, about 47,511 people died of suicide--which is 14.5 deaths per 100,000 population. Suicide was also ranked the 10th leading cause of death in 2019. To mitigate this problem, we wanted to create an application that would intervene in times of crisis. We decided to name this application Teddy. Teddy is a crisis intervention AI intended to step in during emergency situations. Our goal for Teddy is to intervene, assist, and provide comfort during user’s times of need.
 
-Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the information needed to be able to quickly and accurately direct users to potential resources to assist them. The information Teddy extracts is both sentiments and keywords to correctly identify what resources are the best fit for the user. After identification, Teddy redirects users to the correct resource successfully providing users with positive reinforcement and necessary feedback immediately
+Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the information needed to quickly and accurately direct users to helpful resources. Teddy extracts both sentiments and keywords to correctly identify what resources are the best fit for the person. After identification, Teddy successfully redirects individuals to the correct resources by providing them with positive reinforcement and necessary feedback immediately.
 
 ![Image of Main Page](TeddyMedia/Main3-2.png)
 
