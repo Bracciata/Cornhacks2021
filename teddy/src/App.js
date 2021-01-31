@@ -262,6 +262,23 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category">PTSD</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                PTSD is a mental health problem that some people develop after experiencing or witnessing a life-threatening event, like combat, a natural disaster, a car accident, or sexual assault. It's normal to have upsetting memories, feel on edge, or have trouble sleeping after this type of event. If symptoms last more than a few months, it may be PTSD. The good news is that there are effective treatments.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>U.S Department of Veterans Affairs: <a className="resource-link resource-link-underline" href="https://www.ptsd.va.gov/index.asp">https://www.ptsd.va.gov/index.asp</a></li>
+                  <li>Anxiety and Depression Association of America: <a className="resource-link resource-link-underline" href="https://www.wernatie.org/articles/wanting-to-end-your-life">https://www.wernative.org/articles/wanting-to-end-your-life</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Veterans</div>
             </Col>
             <Col xs={8}>
