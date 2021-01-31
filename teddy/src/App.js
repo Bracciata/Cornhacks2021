@@ -188,6 +188,23 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Veterans</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                For veterans, crises can be heightened by their experiences during military service. If you’re a veteran or service member and in crisis, these resources can help.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Veterans Crisis Line: <a className="resource-link resource-link-underline" href="https://www.veteranscrisisline.net/">https://www.veteranscrisisline.net/</a></li>
+                  <li>Make the Connection: <a className="resource-link resource-link-underline" href="https://www.maketheconnection.net/family-friends">https://www.maketheconnection.net/family-friends</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Youth</div>
             </Col>
             <Col xs={8}>
