@@ -15,21 +15,28 @@ function App() {
               height="70"
               className="d-inline-block align-top"
             />{' '}
-            Teddy
+            <div className="logo-text">Teddy</div>
           </div>
         </Navbar.Brand>
       </Navbar>
+
       <Row className="no-margin">
         <Col xs={{ span: 8, offset: 2 }}>
-          <iframe
-            id="myiFrame"
-            allow="microphone;"
-            width="100%"
-            height="450" // need to make this take up the remainer of the vertical screen space
-            src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d">
-          </iframe>
+          <div className="iframe-container">
+            <iframe width="100%" height="100%" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/baacb116-5167-4c03-b8e3-ee85a43bb82d"></iframe>
+          </div>
         </Col>
       </Row>
+    
+      <div className="footer">
+        <div className="footer-header">
+          National Suicide Prevention Lifeline: <a className="link link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+        </div>
+        <div className="footer-body">
+          <div>Icons made by <a className="link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Copyright ©2021</div>
+        </div>
+      </div>
     </Container>
   );
 }
