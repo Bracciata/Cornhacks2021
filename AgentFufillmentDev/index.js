@@ -118,9 +118,9 @@ function generateResponse(keywords) {
             for (var categoryWord of category.keywords) {
                 if (!sufferingFrom.includes(category.name)) {
                     if (word.toLowerCase() == categoryWord || categoryWord.includes(word.toLowerCase())) {
-                        sufferingFrom.add(category.name);
-                        responseStatemets.add(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
-                        responseResources.add(category.resources[Math.floor(Math.random() * category.resources.length)]);   
+                        sufferingFrom.push(category.name);
+                        responseStatemets.push(category.assistance_phrases[Math.floor(Math.random() * category.assistance_phrases.length)]);
+                        responseResources.push(category.resources[Math.floor(Math.random() * category.resources.length)]);   
                     }
                 }
             }
@@ -145,5 +145,5 @@ setCategories();
 
 // The following is not located within the live Dialogflow Index folder.
 // To run a different query update the string below.
-let agent = { query: "I need help with my addiction" };
+let agent = { query: "Get help with my addiction and homelessness" };
 support(agent);
