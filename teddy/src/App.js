@@ -1,40 +1,51 @@
 import './App.css';
 import React, { ReactDOM } from 'react';
-import { Container, Row, Col, Navbar } from 'react-bootstrap';
-
-
+import { Container, Row, Col, Navbar, Form, Button } from 'react-bootstrap';
+import { Client } from 'dialogflow-gateway'
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import Chat from "./chat";
 function App() {
   return (
     <AppBody />
-    )
+  )
+}
+function sendMessage(session, query) {
+  //https://teddy-gbcm.core.ushaflow.io
+  let params = {
+    "session": session,
+    "queryInput": {
+      "text": {
+        "text": query,
+        "languageCode": "en"
+      }
+    }
   }
-
-
+  axios.post(
+    "https://teddy-gbcm.core.ushaflow.io", params).then((response) => {
+      console.log(response);
+    });
+}
+sendMessage('sess', 'hello');
 class AppBody extends React.Component {
 
+  constructor(props) {
+    super(props);
 
-  
-  componentDidMount() {
-    let deleteEle = document.getElementById('top-head-subtitle');
-    console.log(deleteEle);
-    var checkExist = setInterval(function() {
-      if( document.getElementById('chatbox')) {
-         console.log("Exists!");
-         var checkExistTwo = setInterval(function() {
-          if( document.getElementById('chatbox')) {
-             console.log("Exists!");
-             clearInterval(checkExistTwo);
-          }else{
-            console.log('Does not exist');
-          }
-       }, 500);
-         clearInterval(checkExist);
-      }else{
-        console.log('Does not exist');
-      }
-   }, 500);
+    let uuid = uuidv4();
+    sendMessage(uuid,'hello');
+    this.state = {
+      sessionId: uuid,
+      Messages: [[1,'Hello, I am Teddy a Crisis Intervention Bot. I want to begin by saying if at any point you feel the need to speak to a human state "Text a person" or "Call a person" depending on what you prefer to do. May I get your name?'],]
+    }
   }
 
+  componentDidMount() {
+
+  }
+  sendMessage(){
+
+  }
 
   render() {
     return (<Container fluid className="no-padding">
@@ -53,10 +64,17 @@ class AppBody extends React.Component {
         </Navbar.Brand>
       </Navbar>
 
-      <Row className="no-margin" style={{background:"#171717"}}>
+      <Row className="no-margin" style={{ background: "#171717" }}>
         <Col xs={{ span: 8, offset: 2 }}>
-        <embed id="chatbox" src="https://teddy-gbcm.web.ushaflow.io/" style={{width:"100%", height: "100%"}}/>
-
+          <div class="Chat-Container">
+<Chat Messages={this.state.Messages}></Chat>
+<Form style={{display:"flex"}}>
+<Form.Control  placeholder="Your Message" />
+<Button variant="primary" type="submit">
+    Send
+  </Button>
+</Form>
+          </div>
         </Col>
       </Row>
 
