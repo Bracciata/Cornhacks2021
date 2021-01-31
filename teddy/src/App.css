@@ -15,6 +15,8 @@
   height: 12vh;
   width: 100%;
   position: sticky;
+  top: 0;
+  z-index: 1;
 
 }
 
@@ -183,6 +185,7 @@ p:after {
   -webkit-transform: translate(0, -2px);
   transform: translate(0, -2px);
 }
+
 .from-them:after {
   left: 4px;
   width: 26px;
@@ -231,4 +234,56 @@ p:after {
 
 .resource-link-underline {
   text-decoration: underline !important;
+}
+
+/* About Page */
+.about-body {
+  background-color: #b9bbc5;
+}
+
+.about-header {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.about-paragraph {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.about-list {
+  font-size: 18px;
+  padding-bottom: 5px;
+  padding-right: 15;
+  padding-left: 100px;
+}
+
+.about-link {
+  color: black !important;
+}
+
+.about-link-underline:hover {
+  font-weight: 500;
+}
+
+.about-link-underline {
+  text-decoration: underline !important;
+}
+
+.about-image {
+    color: white;
+    display: block;
+    padding-top: 25px !important;
+    padding-bottom: 5px;
+    padding-right: auto;
+    padding-left: 100px;
+    width: 600px;
+    height: 400px;
+    padding-top: 20px;
 }

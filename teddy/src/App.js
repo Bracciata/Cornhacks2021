@@ -19,16 +19,15 @@ class AppBody extends React.Component {
         <Router>
           <Navbar className="navbar">
             <Navbar.Brand className="full-width" href="/">
-            <div className="logo">
-              <img
-                alt="Teddy Logo"
-                src="/logo.svg"
-                width="70"
-                height="70"
-                className="d-inline-block align-top"
-              />{' '}
+              <div className="logo">
+                <img
+                  alt="Teddy Logo"
+                  src="/logo.svg"
+                  width="70"
+                  height="70"
+                  className="d-inline-block align-top"
+                />{' '}
               <div className="logo-text">Teddy</div>
-
               </div>
             </Navbar.Brand>
 
@@ -57,7 +56,6 @@ class AppBody extends React.Component {
               <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
               <div>Copyright ©2021</div>
             </div>
-
           </div>
 
     </Container >
@@ -352,9 +350,73 @@ function Resources() {
 
 function About() {
   return (
-        <div>
-          <h2>TEstsdsdsdsdsds</h2>
-        </div>
+    <Container fluid className="about-body">
+      <Row>
+        <Col xs={4}>
+          <div className="about-header">What is Teddy?</div>
+        </Col>
+        <Col xs={8}>
+          <div className="about-paragraph">
+            Teddy is a crisis intervention AI intended to step in during emergency situations. 
+            With the number of suicides increasing since the beginning of the COVID 19 pandemic, 
+            Teddy hopes to intervene and assist during user’s times of need. Utilizing a Dialogflow chat agent, 
+            Teddy quickly and accurately directs users to potential resources to assist them. 
+            To do this, Teddy extracts both sentiments and keywords to correctly identify what 
+            resources are best for the user. After identification, Teddy redirects users to the 
+            correct resource successfully providing users with positive reinforcement and necessary 
+            feedback immediately.
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={4}>
+          <div className="about-header">General Facts</div>
+        </Col>
+        <Col xs={8}>
+          <img
+              alt="Suicide Rates by Age"
+              src="/figure1.png"
+              className="about-image"
+            />{' '}
+            <div className="about-paragraph">
+              Among females, the suicide rate was highest for those aged 45-64 (10.2 per 100,000). 
+              <br></br>
+              Among males, the suicide rate was highest for those aged 75 and older (39.9 per 100,000)
+            </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={4}/>
+        <Col xs={8}>
+          <img
+              alt="Suicide Rates by Ethnicity"
+              src="/figure2.png"
+              className="about-image"
+            />{' '}
+            <div className="about-paragraph">
+              The crude rates of suicide were highest for American Indian,
+              Non-Hispanic males (34.8 per 100,000) and females (10.5 per 100,000), 
+              followed by White, Non-Hispanic males (30.4 per 100,000) and females (8.3 per 100,000).
+            </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={4}/>
+        <Col xs={8}>
+          <img
+              alt="Suicide Rates in the United States"
+              src="/figure3.png"
+              className="about-image"
+            />{' '}
+            <div className="about-paragraph">
+              Suicide rates are not the same from state to state. 
+              Based on data from the CDC WISQARS Fatal Injury Data Visualization Tool,
+              Figure 4 shows a map of the United States with each state’s age-adjusted 
+              suicide rate in 2018 indicated by color.
+            </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
