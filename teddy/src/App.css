@@ -99,12 +99,18 @@ div.chat {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: normal;
-  max-width: 450px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
           height: 100%;
+          display: flex;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          max-height: 670px;
+          width: 100%;
+
+
 }
 div.Chat-Container{
 	margin: 50px auto 0;

@@ -10,42 +10,72 @@ function App() {
     <AppBody />
   )
 }
-function sendMessage(session, query) {
-  //https://teddy-gbcm.core.ushaflow.io
-  let params = {
-    "session": session,
-    "queryInput": {
-      "text": {
-        "text": query,
-        "languageCode": "en"
-      }
-    }
-  }
-  axios.post(
-    "https://teddy-gbcm.core.ushaflow.io", params).then((response) => {
-      console.log(response);
-    });
-}
-sendMessage('sess', 'hello');
+
 class AppBody extends React.Component {
 
   constructor(props) {
     super(props);
 
     let uuid = uuidv4();
-    sendMessage(uuid,'hello');
+    this.sendMessageCustom(uuid);
     this.state = {
+      currentMessage: "",
       sessionId: uuid,
-      Messages: [[1,'Hello, I am Teddy a Crisis Intervention Bot. I want to begin by saying if at any point you feel the need to speak to a human state "Text a person" or "Call a person" depending on what you prefer to do. May I get your name?'],]
+      Messages: [[1, 'Hello, I am Teddy a Crisis Intervention Bot. I want to begin by saying if at any point you feel the need to speak to a human state "Text a person" or "Call a person" depending on what you prefer to do. May I get your name?'],]
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
 
   componentDidMount() {
 
   }
-  sendMessage(){
-
+  handleChange(event) {
+    this.setState({ currentMessage: event.target.value });
   }
+  sendMessage(event) {
+    event.preventDefault();
+    //https://teddy-gbcm.core.ushaflow.io
+    let existingMessages = this.state.Messages;
+    existingMessages.push([0, this.state.currentMessage]);
+    this.setState({ Messages: existingMessages });
+    let params = {
+      "session": this.state.sessionId,
+      "queryInput": {
+        "text": {
+          "text": this.state.currentMessage,
+          "languageCode": "en"
+        }
+      }
+    }
+    this.setState({currentMessage:""});
+    axios.post(
+      "https://teddy-gbcm.core.ushaflow.io", params).then((response) => {
+        console.log(response.data.queryResult.fulfillmentText);
+        console.log(response);
+        let existingMessages = this.state.Messages;
+        existingMessages.push([1,response.data.queryResult.fulfillmentText]);
+        this.setState({Messages:existingMessages});
+      });
+  }
+  //Custom is used for the first message so the user is greeted on page open.
+  sendMessageCustom(uuid) {
+    //https://teddy-gbcm.core.ushaflow.io
+    let params = {
+      "session": uuid,
+      "queryInput": {
+        "text": {
+          "text": "hello",
+          "languageCode": "en"
+        }
+      }
+    }
+    axios.post(
+      "https://teddy-gbcm.core.ushaflow.io", params).then((response) => {
+        console.log(response);
+      });
+  }
+
 
   render() {
     return (<Container fluid className="no-padding">
@@ -67,13 +97,13 @@ class AppBody extends React.Component {
       <Row className="no-margin" style={{ background: "#171717" }}>
         <Col xs={{ span: 8, offset: 2 }}>
           <div class="Chat-Container">
-<Chat Messages={this.state.Messages}></Chat>
-<Form style={{display:"flex"}}>
-<Form.Control  placeholder="Your Message" />
-<Button variant="primary" type="submit">
-    Send
+            <Chat Messages={this.state.Messages}></Chat>
+            <Form style={{ display: "flex" }} onSubmit={this.sendMessage}>
+              <Form.Control placeholder="Your Message" value={this.state.currentMessage} onChange={this.handleChange} />
+              <Button variant="primary" type="submit">
+                Send
   </Button>
-</Form>
+            </Form>
           </div>
         </Col>
       </Row>
