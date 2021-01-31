@@ -52,8 +52,8 @@ class AppBody extends React.Component {
         </Router>
           <div className="footer">
             <div className="footer-header">
-              National Suicide Prevention Lifeline: <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">https://suicidepreventionlifeline.org/</a> or (800)-273-8255
-        </div>
+              National Suicide Prevention Lifeline:  <a className="link-footer-header link-underline" href="https://suicidepreventionlifeline.org/">  https://suicidepreventionlifeline.org/</a> or (800)-273-8255
+            </div>
             <div className="footer-body">
               <div>Icons made by <a className="link-footer-body link-underline" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className="link-footer-body link-underline" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
               <div>Copyright ©2021</div>
@@ -149,9 +149,26 @@ class Home extends React.Component{
 }
 function Resources() {
   return (
-        <div>
-          <h2>TEsts</h2>
-        </div>
+        <Container fluid className="resources-body">
+          <Row>
+            <Col xs={4}>
+              <div className="resource-category">Youth</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                Suicide is the second leading cause of death for young people between 10 to 24. Sometimes your struggle can be underestimated because of your age. But we hear you, and help is available.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>You Matter: <a className="resource-link resource-link-underline" href="https://youmatter.suicidepreventionlifeline.org/">https://youmatter.suicidepreventionlifeline.org/</a></li>
+                  <li>Active Minds: <a className="resource-link resource-link-underline" href="https://www.activeminds.org/">https://www.activeminds.org/</a></li>
+                  <li>The Trevor Project: <a className="resource-link resource-link-underline" href="https://www.thetrevorproject.org/">https://www.thetrevorproject.org/</a></li>
+                  <li>Love is Respect: <a className="resource-link resource-link-underline" href="https://www.loveisrespect.org/">https://www.loveisrespect.org/</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+        </Container>
   );
 }
 
