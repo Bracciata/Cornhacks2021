@@ -97,6 +97,20 @@ function setCategories() {
     homeless_individuals.assistance_phrases = ["Times like these are hard for many financially. I recommend looking at RESOURCE . ", "I respect your courage to continue fighting I believe RESOURCE may be able to help you.", "You are not alone in financial struggles try looking to RESOURCE . "];
     categories.push(homeless_individuals);
 
+    const bullied = new Category();
+    bullied.keywords = ["bully", "oppressor", "rascal", "annoyer", "annoying", "rude", "tough", "tease", "harass", "terrorize", "threaten", "torment", "torture", "fought", "fight", "intimidate", "persecute"];
+    bullied.resources = ["https://www.stopbullying.gov/resources/get-help-now", "https://www.psychologytoday.com/us/basics/bullying", "https://www.psychologytoday.com/us/blog/rethinking-your-teenager/202004/new-approach-stop-bullying", "https://kidshealth.org/en/teens/bullies.html"];
+    bullied.name = "Bullied";
+    bullied.assistance_phrases = ["Bullying should not be tolerated in any environment. If you feel like you are being bullied remember that you have resources like RESOURCE . ", "Stop immediately and look at RESOURCE . These should help provide the next steps moving forward. You should not have to deal with this by yourself. ", "Bullying is unwanted, aggressive behavior that involves a real or perceived power imbalance. You do not have to deal with this bully. I recommend using RESOURCE to learn how to deal with it. "];
+    categories.push(bullied);
+
+    const elderly = new Category();
+    elderly.keywords = ["old", "age", "elderly", "elder"," senior", "senior citizen", "ancient", "oldster", "patriarch", "oldest"];
+    elderly.resources = ["http://www.ncmha.org/resources/", "https://eldercare.acl.gov/Public/Resources/Topic/Behavioral_Health.aspx", "https://www.ncoa.org/center-for-healthy-aging/behavioral-health/"];
+    elderly.name = "Elderly";
+    elderly.assistance_phrases = ["Growing up is never easy, but know that resources like RESOURCE can help. ", "As life goes know, remember that there is always help. I recommend looking at RESOURCE . ", "I understand that life can be hard, but remember the happy things. Remember that here is always a brighter day. Please look at RESOURCE for more helpful tips!"];
+    categories.push(elderly);
+
     return categories;
 }
 
@@ -153,14 +167,13 @@ function generateResponse(keywords) {
     }
     let response = "";
     for (var i = 0; i < suffering_from.length; i++) {
-        phrase = response_statemets[i].replace("RESOURCE", response_resources[i]);
-        console.log(phrase);
+        phrase = response_statemets[i].replace("RESOURCE", response_resources[i]);;
         response += phrase;
         if (i + 1 < suffering_from.length){
             response += "In edition, ";
         } 
     }
-    console.log(response);
+    return response;
     // Build the response based on what they are suffering from and randomly selected associated responses and resources.
 }
 
@@ -180,5 +193,5 @@ function support(agent) {
 
 // The following is not located within the live Dialogflow Index folder.
 // To run a different query update the string below.
-let agent = { query: "I need help with my addiction and dad" };
+let agent = { query: "I need help with age" };
 support(agent);
