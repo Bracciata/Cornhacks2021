@@ -29,33 +29,6 @@
 ## What's next for Teddy?
 <p>Now that Teddy is operational, we hope to increase the number of categorical groups so that we can provide more accurate and helpful resources. Once enough data is collected, we would love to extend Teddy to international usage since suicide is also prevalent outside the United States. </p>
 
-
-![Image of Main Page](TeddyMedia/Main3-2.png)
-
-## Dialog Flow
-
-![Image of Dialog Flow](TeddyMedia/Teddy3-2Image.png)
-
-## About Page
-
-![Image of About Page](TeddyMedia/About.png)
-
-## Resources Page
-
-![Image of Resources Page](TeddyMedia/Resources3-2.png)
-
-## Google Assistant
-
-### Mobile View
-![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
-
-### Web View
-![Image of Google Assistant](TeddyMedia/google-assistant-view-light.png)
-
-## Development
-
-To test the offline version of the agent's fufillment run `node .` inside of AgentFufillmentDev.
-
 ## Technologies and Tools Used:
 
 - [Dialogflow](https://cloud.google.com/dialogflow) for the Chat Agent
@@ -63,3 +36,27 @@ To test the offline version of the agent's fufillment run `node .` inside of Age
 - [NPM Keyword Extractor](https://www.npmjs.com/package/keyword-extractor)
 - [NPM Sentiment](https://www.npmjs.com/package/sentiment)
 - [Flaticon](https://www.flaticon.com/free-icon/teddy-bear_771988?term=teddy%20bear&page=3&position=79&page=3&position=79&related_id=771988&origin=search)
+
+## Screenshots
+
+### Dialog Flow
+![Image of Main Page](TeddyMedia/Main3-2.png)
+
+### About Page
+![Image of Dialog Flow](TeddyMedia/Teddy3-2Image.png)
+
+### Resources Page
+![Image of About Page](TeddyMedia/About.png)
+
+### Google Assistant
+![Image of Resources Page](TeddyMedia/Resources3-2.png)
+
+#### Mobile View
+![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
+
+#### Web View
+![Image of Google Assistant](TeddyMedia/google-assistant-view-light.png)
+
+## Development
+
+To test the offline version of the agent's fufillment run `node .` inside of AgentFufillmentDev.
