@@ -14,6 +14,8 @@
   background-color: #3a4348;
   height: 12vh;
   width: 100%;
+  position: sticky;
+
 }
 
 .nav-option {
