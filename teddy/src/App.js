@@ -19,7 +19,7 @@ class AppBody extends React.Component {
       <Container fluid className="no-padding">
         <Router>
           <Navbar className="navbar">
-            <Navbar.Brand className="full-width" href="/"></Navbar.Brand>
+            <Navbar.Brand className="full-width" href="/">
             <div className="logo">
               <img
                 alt="Teddy Logo"
@@ -28,7 +28,11 @@ class AppBody extends React.Component {
                 height="70"
                 className="d-inline-block align-top"
               />{' '}
+              <div className="logo-text">Teddy</div>
+
               </div>
+</Navbar.Brand>
+
               <Nav className="ml-auto">
                 <Link to="/about" className="nav-option">About</Link>
                 <Link to="/resources" className="nav-option">Resources</Link>

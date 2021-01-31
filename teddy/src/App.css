@@ -192,3 +192,6 @@ p:before, p:after {
   #root > div > div.no-margin.row > div > div > div > p{
     height: fit-content;
   }
+  #root > div > nav > a{
+    width:fit-content;
+  }
