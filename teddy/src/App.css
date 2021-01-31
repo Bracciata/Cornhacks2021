@@ -14,11 +14,14 @@
   background-color: #3a4348;
   height: 12vh;
   width: 100%;
+  position: sticky;
+
 }
 
 .nav-option {
   color: white !important;
   font-size: 24px;
+  padding: 20px;
 }
 
 .logo {
