@@ -198,3 +198,7 @@ p:before, p:after {
   #root > div > nav > a{
     width:fit-content;
   }
+  button{
+    width: 18%;
+
+  }
