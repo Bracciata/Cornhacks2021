@@ -170,6 +170,25 @@ function Resources() {
 
           <Row>
             <Col xs={4}>
+              <div className="resource-category">LGBTQ+</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                The LGBTQ+ community is diverse and strong but maybe disproportionately at-risk for suicidal feelings and other mental health struggles because of the discrimination and prejudice they too often are up against. This section has information and resources for yourself and to help support loved ones who are LGBTQ+.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Planned Parenthood: Sexuality Info and Resources: <a className="resource-link resource-link-underline" href="https://www.plannedparenthood.org/learn">https://www.plannedparenthood.org/learn</a></li>
+                  <li>GLAAD: An Ally’s Guide to Terminology: <a className="resource-link resource-link-underline" href="https://www.glaad.org/publications/talkingabout/terminology">https://www.glaad.org/publications/talkingabout/terminology</a></li>
+                  <li>You Matter: How to Be A Straight Ally: <a className="resource-link resource-link-underline" href="https://youmatter.suicidepreventionlifeline.org/how-to-be-an-ally/">https://youmatter.suicidepreventionlifeline.org/how-to-be-an-ally/</a></li>
+                  <li>It Gets Better Project: Hope for LGBT Youth: <a className="resource-link resource-link-underline" href="https://itgetsbetter.org/">https://itgetsbetter.org/</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Loss Survivors</div>
             </Col>
             <Col xs={8}>
