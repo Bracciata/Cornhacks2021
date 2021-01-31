@@ -152,6 +152,23 @@ function Resources() {
         <Container fluid className="resources-body">
           <Row>
             <Col xs={4}>
+              <div className="resource-category">Addiction</div>
+            </Col>
+            <Col xs={8}>
+              <div className="resource-description">
+                When you’re stuck in the cycle of addiction, recovery can seem out of reach. But no matter how powerless you feel, change is possible with the right treatment, coping strategies, and support. Don’t give up, even if you’ve tried and failed before.
+              </div>
+              <div className="resources-list">
+                <ul>
+                  <li>Substance Abuse and Mental Health Services Administration: <a className="resource-link resource-link-underline" href="https://www.samhsa.gov/find-help/national-helpline">https://www.samhsa.gov/find-help/national-helpline</a></li>
+                  <li>HelpGuide: <a className="resource-link resource-link-underline" href="https://www.helpguide.org/home-pages/addictions.htm">https://www.helpguide.org/home-pages/addictions.htm</a></li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+          
+          <Row>
+            <Col xs={4}>
               <div className="resource-category">Attempt Survivors</div>
             </Col>
             <Col xs={8}>
