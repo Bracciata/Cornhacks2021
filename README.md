@@ -4,7 +4,6 @@ The problem we identified for our project was the high number of suicides in the
 
 Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the information needed to quickly and accurately direct users to helpful resources. Teddy extracts both sentiments and keywords to correctly identify what resources are the best fit for the person. After identification, Teddy successfully redirects individuals to the correct resources by providing them with positive reinforcement and necessary feedback immediately.
 
-
 ![Image of Main Page](TeddyMedia/Main3-2.png)
 
 ## Dialog Flow
@@ -18,6 +17,14 @@ Teddy works by utilizing a Dialogflow chat agent. This allows Teddy to get the i
 ## Resources
 
 ![Image of Resources Page](TeddyMedia/Resources3-2.png)
+
+## Google Assistant
+
+![Image of Google Assistant](TeddyMedia/google-assistant-dark.png)
+Mobile View
+
+![Image of Google Assistant](TeddyMedia/google-assistant-view-light.png)
+Web View
 
 ## Development
 
